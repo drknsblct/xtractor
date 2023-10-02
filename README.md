@@ -1,4 +1,4 @@
-# OverTheWire Bandit12 Solution
+# Decompressing Script for OverTheWire Bandit12
 
 This markdown guides you through solving the Bandit12 challenge from OverTheWire using a simplified approach.
 
@@ -36,7 +36,7 @@ Decompress the repeatedly compressed file `data.txt` to obtain the password for 
 ```bash
 #!/bin/bash
 dir=$(basename $PWD)
-cp /home/bandit12/data.txt /tmp/$dir/backup
+cp ~/data.txt /tmp/$dir/backup
 xxd -r backup >data
 
 ftype=$(file -b --mime-type data* | cut -d '/' -f2)
