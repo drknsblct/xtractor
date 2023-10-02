@@ -1,6 +1,6 @@
 #!/bin/bash
 dir=$(basename $PWD)
-cp /home/bandit12/data.txt /tmp/$dir/backup
+cp ~/data.txt /tmp/$dir/backup
 xxd -r backup >data
 
 ftype=$(file -b --mime-type data* | cut -d '/' -f2)
